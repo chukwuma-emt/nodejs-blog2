@@ -55,5 +55,5 @@ app.use('/', require('./server/routes/admin'))
 console.log("Views Path:", path.join(__dirname, "views"))
 
 app.listen(PORT, ()=> {
-    console.log(`App listening on port ${PORT}`);
+    console.log(`App listening on port= ${PORT}`);
 });
