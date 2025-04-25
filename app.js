@@ -52,6 +52,8 @@ app.locals.isActiveRoute = isActiveRoute
 app.use('/', require('./server/routes/main'))
 app.use('/', require('./server/routes/admin'))
 
+console.log("Views Path:", path.join(__dirname, "views"))
+
 app.listen(PORT, ()=> {
     console.log(`App listening on port ${PORT}`);
 });
