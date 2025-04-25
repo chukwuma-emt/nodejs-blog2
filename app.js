@@ -46,6 +46,9 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.set('layout', path.join(__dirname, 'views', 'Layouts', 'admin'))
 
+app.get("/admin", (req, res)=>{
+    res.render("admin/index",{ layout: path.join(__dirname, 'views', 'Layouts', 'admin')} )
+})
 
 app.locals.isActiveRoute = isActiveRoute
 
