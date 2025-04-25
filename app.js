@@ -1,3 +1,4 @@
+const path = require('path')
 require ('dotenv').config();
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
@@ -13,7 +14,7 @@ const { isActiveRoute } = require('./server/helpers/routerHelpers')
 
 const app = express();
 const PORT = 5000 || process.env.PORT;
-const path = require('path')
+
 
 //connect to database
 connectDB();
