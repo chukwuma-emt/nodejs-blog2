@@ -44,7 +44,7 @@ app.use(expressLayout);
 app.set('layout', './layouts/main')
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
-//app.set('views', Path2D.join(__dirname, 'views'))
+app.set('layout', path.join(__dirname, 'views', 'Layouts', 'admin'))
 
 
 app.locals.isActiveRoute = isActiveRoute
