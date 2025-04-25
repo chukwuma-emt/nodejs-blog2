@@ -13,6 +13,7 @@ const { isActiveRoute } = require('./server/helpers/routerHelpers')
 
 const app = express();
 const PORT = 5000 || process.env.PORT;
+const path = require('path')
 
 //connect to database
 connectDB();
@@ -36,10 +37,13 @@ app.use(session({
 
 app.use(express.static('public'))
 
+
 // templating engine
 app.use(expressLayout);
 app.set('layout', './layouts/main')
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
+//app.set('views', Path2D.join(__dirname, 'views'))
 
 
 app.locals.isActiveRoute = isActiveRoute
